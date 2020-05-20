@@ -79,7 +79,7 @@ h2 {
     /* background-color: red; */
     top: 7%; 
     left: 40%;
-    /* z-index: 0;/ */
+    z-index: 3;
 }
 
 #proj-2 {
@@ -89,17 +89,61 @@ h2 {
     /* background-color: red; */
     top: 29.5%; 
     left: 40%;
-    z-index: 0;
+    z-index: 3;
 }
 
 #proj-3 {
     position: absolute; 
     height: 18%;
     width:49.5%;
-    /* background-color: red; */
+    /* background-color: pink; */
     top: 42%; 
     left: 40%;
-    /* z-index: 0;/ */
+    z-index: 3;
+}
+
+/* #in-between{
+    position: absolute; 
+    height: 100%;
+    width:60%;
+    top: 0%; 
+    right: 0%;
+    z-index: 2;
+} */
+
+#proj-4 {
+    position: absolute; 
+    height: 8.5%;
+    width:54.5%;
+    /* background-color: orange; */
+    /* top: 64.5%;  */
+    top: 7%; 
+    left: 40%;
+    /* pointer-events: none; */
+    z-index: 1;
+}
+
+.proj-51 {
+    position: absolute; 
+    height: 8.75%;
+    width:34%;
+    /* background-color: orange; */
+    /* top: 64.5%;  */
+    top: 19.75%; 
+    left: 40%;
+    /* pointer-events: none; */
+    z-index: 1;
+}
+.proj-52 {
+    position: absolute; 
+    height: 8.75%;
+    width:53%;
+    /* background-color: orange; */
+    /* top: 64.5%;  */
+    top: 28.5%; 
+    left: 40%;
+    /* pointer-events: none; */
+    z-index: 1;
 }
 
 #navbar {
@@ -109,12 +153,37 @@ h2 {
 #description {
     font-family: 'Krona One', sans-serif;
     /* color: white; */
-    bottom: 28%;
-    right: 47%;
+    top: 69%;
+    left: 40%;
     z-index: 2;
+    width: 400px;
     /* font-family: 'Roboto Mono', monospace; */
     font-size: 1em;
     position: fixed;
+    /* margin: 30px; */
+    line-height: 1.6;
+    color: white;
+}
+#made-with {
+    font-family: 'Krona One', sans-serif;
+    /* color: white; */
+    top: 68%;
+    /* right: 46.25%; */
+    left: 68%;
+    z-index: 2;
+    /* font-family: 'Roboto Mono', monospace; */
+    /* font-size: 2em; */
+    position: fixed;
+    /* margin: 30px; */
+    color: white;
+}
+#made-with-description {
+    font-family: 'Krona One', sans-serif;
+    top: 68%;
+    left: 68%;
+    font-size: 1em;
+    position: fixed;
+
     /* margin: 30px; */
     color: white;
 }
@@ -148,6 +217,70 @@ button:hover {
 canvas:focus {
     outline: none !important;
 }
+#iconDown {
+    /* color: white; */
+    bottom: 38%;
+    right: 3%;
+    z-index: 2;
+    font-size: 2.5em;
+    /* font-family: 'Roboto Mono', monospace; */
+    position: fixed;
+    /* margin: 30px; */
+    color: white;
+    /* Rotate div */
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    z-index: 5;
+}
+#iconUp {
+    /* color: white; */
+    top: 5.5%;
+    right: 3%;
+    z-index: 2;
+    font-size: 2.5em;
+    /* font-family: 'Roboto Mono', monospace; */
+    position: fixed;
+    /* margin: 30px; */
+    color: white;
+    /* Rotate div */
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    z-index: 5;
+
+}
+.left {
+    background-color: hsl(248, 71%, 62%);
+}
+.disabled {
+    pointer-events: none;
+}
+/* #glow-test {
+  color: black;
+  font-size: 5em;;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 2px;
+} */
+
+/* .glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+} */
 </style>
 
 
@@ -161,8 +294,18 @@ canvas:focus {
     </p>
 
     <!-- <div>
-        <h1>TYPE TYPE REVENGE</h1>
+        <br>
+        <br>
+        <h2 id="glow-test" class="glow">TYPE TYPE REVENGE</h2>
     </div> -->
+    <div id="iconUp">
+        >
+    </div>
+    <div id="iconDown">
+        >
+        <!-- <i class="far fa-question-circle"></i>
+        <i class="fa fa-angle-double-down" aria-hidden="true"></i> -->
+    </div>
     
     <div id="glimpse">
     </div>
@@ -170,18 +313,44 @@ canvas:focus {
     <div id="top-glimpse">
     </div>
 
-    <div id="proj-1" class="1">
+    <div id="proj-1" class="01">
     </div>
 
-    <div id="proj-2" class="2">
+    <div id="proj-2" class="02">
     </div>
 
-    <div id="proj-3" class="3">
+    <div id="proj-3" class="03">
     </div>
 
+    <!-- <div id="in-between">
+
+    </div> -->
+
+    <div id="proj-4" class="04 disabled">
+    </div>
+
+    <div id="proj-51" class="05 proj-51 disabled">
+    </div>
+    <div id="proj-52" class="05 proj-52 disabled">
+    </div>
+
+    <!-- <div id="black-box">
+
+    </div> -->
+    <div id="made-with">
+        <div style="font-size: 2em;">made with:</div>
+        <div style="font-size: 1.5em;" class="made-with-txt"> three.js</div>
+        <div style="font-size: 1.5em;" class="made-with-txt"> tween.js</div>
+        <!-- <div style="font-size: 1.5em;"> npm</div> -->
+    </div>
+    <!-- <div id="made-with-description">
+        django <br>
+        three.js
+    </div> -->
     <div id="description">
-        lorem ipsum etc etc.
+        A dynamic typing-practice game modeled after the classic iPhone game, Tap Tap Revenge.
     </div>
+
     <button>learn more</button>
 
     <div class="col-container">
