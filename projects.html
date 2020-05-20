@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>anabelle's portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- <body style="background: linear-gradient(270deg, #c39bf2, #f29bd8, #f2d59b);
+-webkit-animation: bg-animation 30s ease infinite;
+-moz-animation: bg-animation 30s ease infinite;
+animation: bg-animation 30s ease infinite;"> -->
+<style>
+.col-container{
+    display:table;
+    /* background-color:#ccc; */
+    width:100%;
+    height:100%;
+}
+.left{
+    display:table-cell;
+    /* background-color:green; */
+    width:30%;
+    height:100%;
+}
+.right{
+    display:table-cell;
+    background-color:black;
+    width:70%;
+    height:100%;
+}
+h2 {
+    font-family: 'Krona One', sans-serif;
+    color: white;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    /* font-family: 'Roboto Mono', monospace; */
+   font-size: 1em;
+   position: fixed;
+   margin: 30px;
+   outline: 5px white;;
+}
+
+/* a:nth-child(2) {
+    padding-left: 30px;
+} */
+#glimpse {
+    position: absolute; 
+    height: 70%;
+    width:25%;
+    background-color: aqua;
+    top: 20%; 
+    left: 10%;
+    z-index: 0;
+}
+
+#top-glimpse {
+    position: absolute; 
+    height: 100%;
+    width:30%;
+    /* background-color: red; */
+    top: 0%; 
+    left: 0%;
+    /* z-index: 0;/ */
+}
+
+#proj-1 {
+    position: absolute; 
+    height: 18%;
+    width:51%;
+    /* background-color: red; */
+    top: 7%; 
+    left: 40%;
+    /* z-index: 0;/ */
+}
+
+#proj-2 {
+    position: absolute; 
+    height: 8.5%;
+    width:49.5%;
+    /* background-color: red; */
+    top: 29.5%; 
+    left: 40%;
+    z-index: 0;
+}
+
+#proj-3 {
+    position: absolute; 
+    height: 18%;
+    width:49.5%;
+    /* background-color: red; */
+    top: 42%; 
+    left: 40%;
+    /* z-index: 0;/ */
+}
+
+#navbar {
+    z-index: 2;
+}
+
+#description {
+    font-family: 'Krona One', sans-serif;
+    /* color: white; */
+    bottom: 28%;
+    right: 47%;
+    z-index: 2;
+    /* font-family: 'Roboto Mono', monospace; */
+    font-size: 1em;
+    position: fixed;
+    /* margin: 30px; */
+    color: white;
+}
+button {
+    border: 2px solid white;
+    background-color: black;
+    font-family: 'Krona One', sans-serif;
+    padding: 14px 28px;
+    /* color: white; */
+    bottom: 7%;
+    right: 48%;
+    z-index: 2;
+    /* font-family: 'Roboto Mono', monospace; */
+    font-size: 1em;
+    position: fixed;
+    margin: 30px;
+    color: white;
+}
+button:focus{
+      outline: none !important;
+    /* border: none !important; */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+/* */
+button:hover {
+    color:black;
+    border: 2px solid black;
+    background-color: white;;
+}
+canvas:focus {
+    outline: none !important;
+}
+</style>
+
+
+<!-- <a id="title">let's dance</a> -->
+<body>
+    <p id="navbar">
+        <a href="index.html">home</a> &ensp;
+        <a href="projects.html" class="active">my work</a> &ensp;
+        <a href="aboutme.html">about me</a> &ensp;
+        <a href="contact.html">let's get in touch</a>
+    </p>
+
+    <!-- <div>
+        <h1>TYPE TYPE REVENGE</h1>
+    </div> -->
+    
+    <div id="glimpse">
+    </div>
+
+    <div id="top-glimpse">
+    </div>
+
+    <div id="proj-1" class="1">
+    </div>
+
+    <div id="proj-2" class="2">
+    </div>
+
+    <div id="proj-3" class="3">
+    </div>
+
+    <div id="description">
+        lorem ipsum etc etc.
+    </div>
+    <button>learn more</button>
+
+    <div class="col-container">
+        <div class="left" id="left">
+        </div>
+        <div class="right"id="right">
+            
+        </div>
+    </div>
+    
+</body>
+
+<!-- <canvas id="c" ></canvas> -->
+
+<!-- </canvas>
+<!-- <div>click to object morph</div> -->
+<!-- <div id="c"></div> -->
+</body>
+
+<script type="module" src="js/cube.js"></script>
+<script type="module" src="js/left.js"></script>
+
+
+</html>
