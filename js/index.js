@@ -78,7 +78,7 @@ function main() {
 
   // load a sound and set it as the Audio object's buffer
   var audioLoader = new THREE.AudioLoader();
-  audioLoader.load( 'sounds/walk_away.mp3', function( buffer ) {
+  audioLoader.load( 'assets/sounds/walk_away.mp3', function( buffer ) {
     sound.setBuffer( buffer );
     sound.setLoop(true);
     sound.setVolume(0.25);
