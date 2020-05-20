@@ -2,7 +2,10 @@ html, body {
    margin: 0;
    height: 100%;
    overflow: hidden;
-   
+   /* font-family: 'Roboto Mono', monospace; */
+   background-color: #ffe9b8;
+   font-family: 'DM Mono', monospace;
+   font-size: 1em;
 } 
 
 #c {
@@ -11,7 +14,29 @@ html, body {
    display: block;
 }
 
-a{
+
+/* navbar */
+ul {
+   list-style-type: none;
+   margin: 20px;
+   padding: 0;
+   overflow: hidden;
+ }
+ 
+ li {
+   float: left;
+ }
+ 
+ li a {
+   display: block;
+   color: black;
+   text-align: center;
+   padding: 14px 30px;
+   text-decoration: none;
+ }
+
+
+/* a{
    font-family: 'Roboto Mono', monospace;
    font-size: 1em;
    position: fixed;
@@ -19,10 +44,11 @@ a{
 }
 
 #title{
-   /* text-align: center; */
    left: 44%; 
    top: 0;
-}
+} */
+   /* text-align: center; */
+
 
 @-webkit-keyframes bg-animation {
    0%{background-position:0% 50%}
