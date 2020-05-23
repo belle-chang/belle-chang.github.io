@@ -56,13 +56,13 @@ function main() {
   // const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.z = 2;
 
-  const canvas = renderer.domElement;
-  const controls = new OrbitControls(camera, canvas);
-  controls.enableDamping = false;
-  controls.enablePan = false;
-  controls.minDistance = 0;
-  controls.maxDistance = 5;
-  controls.update();
+  // const canvas = renderer.domElement;
+  // const controls = new OrbitControls(camera, canvas);
+  // controls.enableDamping = false;
+  // controls.enablePan = false;
+  // controls.minDistance = 0;
+  // controls.maxDistance = 5;
+  // controls.update();
 
   let scene = new THREE.Scene();
 
@@ -161,6 +161,8 @@ function main() {
 
 
 }
+// END OF MAIN
+let down = false;
 
 document.getElementById("proj-1").addEventListener("mouseover", glow.bind(event, 1));
 document.getElementById("proj-1").addEventListener("mouseout", turnoff.bind(event, 1));
@@ -184,15 +186,15 @@ document.getElementById("iconDown").addEventListener("click", scrollDown);
 document.getElementById("iconUp").addEventListener("click", scrollUp);
 
 function scrollDown() {
-  objects[0].update(true);
-  let delay = 300;
-  for (let i = 1; i < objects.length; i++) {
-    setTimeout(() => (objects[i].update(true)), delay);
-    delay += 300;
+  if (!down) {
+    objects[0].update(true);
+    let delay = 300;
+    for (let i = 1; i < objects.length; i++) {
+      setTimeout(() => (objects[i].update(true)), delay);
+      delay += 300;
+    }
+    down = true;
   }
-  
-  // setTimeout(() => (objects[1].update(true)), 300);
-  // setTimeout(() => (objects[2].update(true)), 600);
 }
 
 function scrollUp() {
@@ -203,6 +205,7 @@ function scrollUp() {
     setTimeout(() => (objects[i].update(false)), delay);
     delay += 300;
   }
+  down = false;
   // setTimeout(() => (objects[1].update(false)), 300);
   // setTimeout(() => (objects[0].update(false)), 600);
 }
@@ -212,7 +215,7 @@ function glow(arg) {
   if (current_proj != null) {
     current_proj.state.mesh1.visible = true;
     if (current_proj.state.mesh2) current_proj.state.mesh2.visible = true;
-    // document.getElementById("left").style = "background-color: " + current_proj.color;
+    document.getElementById("left").style = "background-color: " + current_proj.color;
     var parent = document.getElementById("made-with");
     let children = document.getElementsByClassName("made-with-txt");
     while (children.length > 0) {

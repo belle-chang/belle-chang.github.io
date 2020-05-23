@@ -86,7 +86,7 @@ function main() {
 
 
   var loader = new THREE.FontLoader();
-  loader.load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/fonts/helvetiker_bold.typeface.json', (font) => {
+  loader.load('assets/fonts/Krona One_Regular.json', (font) => {
     var textGeo1 = new THREE.TextGeometry("anabelle", {
         font: font,
         size: .5,

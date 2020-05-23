@@ -3,7 +3,8 @@ html, body {
    height: 100%;
    overflow: hidden;
    /* font-family: 'Roboto Mono', monospace; */
-   background-color: #ffe9b8;
+   /* background-color: #ffe9b8; */
+   background-color: black;
    font-family: 'DM Mono', monospace;
    font-size: 1em;
 } 
@@ -18,7 +19,8 @@ html, body {
 /* navbar */
 a {
    /* display: block; */
-   color: black;
+   /* color: black; */
+   color: white;
    /* text-align: center;
    padding: 14px 15px; */ 
    text-decoration: none;
@@ -28,7 +30,7 @@ a {
  }
 
  a:hover {
-   color: white;
+   color: #ffe9b8;
  }
 
  /* loader page */
